@@ -6,6 +6,23 @@ const eleventyNavigation = {
 
 const numberOfLatestPostsToShow = 3;
 ---
+
+<h1>👋🏼Hello, my name is Lee Wei</h1>
+<ul>
+	<li>Currently designing and consulting at EPAM</li>
+	<li>Building holistic experiences that are people-friendly and worthy of your time since 2015</li>
+	<li>Science nerd (ask me about Interstellar)</li>
+	<li>Mediocre developer</li>
+	<li>Average baker</li>
+</ul>
+
+<h2>Design & Consultancy Work</h2>
+<p>As of 2023, I have been working in a fantastic not-so-little firm called EPAM, which also happens to be in the S&P500, where we design and develop solutions for our corporate clients.</p>
+
+<h2>Retrospectives</h2>
+<p>During my early product design career from 2015 to 2020, I played foundational roles as an early employee and co-founder that significantly shaped my professional trajectory. I have spent time retrospectively working on reflective write-ups to document the valuable experiences, heartbreaks, and lessons learned during these formative periods.</p>
+
+<h2>Latest Posts</h2>
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 <h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
