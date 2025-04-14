@@ -38,6 +38,10 @@
 
 /* Global stylesheet */
 
+.test-token {
+	--stroke: 1px dashed var(--color-mid);
+	border: var(--stroke);
+}
 
 @view-transition {
 	navigation: auto;

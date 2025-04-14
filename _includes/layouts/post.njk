@@ -3,7 +3,15 @@ layout: layouts/base.njk
 ---
 {# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle #}
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
-{%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
+{%- css %}{% include "public/css/prism-diff.css" %}{% endcss %}
+{%- css %}
+.test-token {
+  border: var(--stroke);
+  --stroke: 1px dashed var(--color-mid);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+{% endcss %}
 <h1>{{ title }}</h1>
 
 <ul class="post-metadata">
@@ -13,6 +21,9 @@ layout: layouts/base.njk
 	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
 	{%- endfor %}
 </ul>
+<div class="test-token">
+    This is a test element using the Mid color token from our design system
+</div>
 
 {{ content | safe }}
 
