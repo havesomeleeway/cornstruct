@@ -2,8 +2,8 @@ import plugin from 'tailwindcss/plugin';
 import postcss from 'postcss';
 import postcssJs from 'postcss-js';
 
-import clampGenerator from './css-utils/clamp-generator.js';
-import tokensToTailwind from './css-utils/tokens-to-tailwind.js';
+import clampGenerator from './public/css-utils/clamp-generator.js';
+import tokensToTailwind from './public/css-utils/tokens-to-tailwind.js';
 
 // Raw design tokens
 import colorTokens from './public/design-tokens/colors.json' assert { type: 'json' };
@@ -16,14 +16,24 @@ import viewportTokens from './public/design-tokens/viewports.json' assert { type
 
 // Process design tokens
 const colors = tokensToTailwind(colorTokens.items);
+console.log('\n=== DESIGN TOKEN PROCESSING ===');
+console.log('Raw color tokens:', colorTokens.items);
+console.log('Processed colors:', colors);
+console.log('===============================\n');
+
 const fontFamily = tokensToTailwind(fontTokens.items);
 const fontWeight = tokensToTailwind(textWeightTokens.items);
 const fontSize = tokensToTailwind(clampGenerator(textSizeTokens.items));
 const fontLeading = tokensToTailwind(textLeadingTokens.items);
 const spacing = tokensToTailwind(clampGenerator(spacingTokens.items));
 
-module.exports = {
-  content: ['./public/**/*.{html,js,jsx,mdx,njk,twig,vue,json}'],
+export default {
+  content: [
+    './public/**/*.{html,js,jsx,mdx,njk,twig,vue,json}',
+    './_includes/**/*.{html,js,jsx,mdx,njk,twig,vue,json}',
+    './content/**/*.{html,js,jsx,mdx,njk,twig,vue,json}',
+    './_config/**/*.{html,js,jsx,mdx,njk,twig,vue,json}'
+  ],
   // Add color classes to safe list so they are always generated
   safelist: [],
   presets: [],
@@ -101,14 +111,19 @@ module.exports = {
 
       groups.forEach(({key, prefix}) => {
         const group = currentConfig.theme[key];
+        console.log(`\n=== Processing ${key.toUpperCase()} Group ===`);
+        console.log('Group contents:', group);
 
         if (!group) {
+          console.log(`No ${key} group found!`);
           return;
         }
 
         Object.keys(group).forEach(key => {
+          console.log(`Creating CSS variable: --${prefix}-${key}: ${group[key]}`);
           result += `--${prefix}-${key}: ${group[key]};`;
         });
+        console.log('=====================================\n');
       });
 
       addComponents({
