@@ -16,10 +16,18 @@
     },
     {
       "name": "Light",
-      "value": "#ffffff"
+      "value": "#FEFDFB"
     },
     {
       "name": "Primary",
+      "value": "#181617"
+    },
+    {
+      "name": "Secondary",
+      "value": "#62908A"
+    },
+    {
+      "name": "Theme",
       "value": "#FFBB44"
     }
   ]
