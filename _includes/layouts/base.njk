@@ -6,9 +6,9 @@
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-		<link rel="stylesheet" href="/css/index.css">
+		<link rel="stylesheet" href="/css/global.css">
 
-		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
+		{#- Uncomment this if you'd like folks to know that you used Eleventy to build your site!  #}
 		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
 
 		{#-
@@ -25,8 +25,8 @@
 		{#- Add an arbitrary string to the bundle #}
 		{%- css %}/* This is an arbitrary CSS string added to the bundle */{% endcss %}
 		{#- Add the contents of a file to the bundle #}
-		{%- css %}{% include "public/css/reset.css" %}{% endcss %}
-		{%- css %}{% include "public/css/index.css" %}{% endcss %}
+		{%- css %}{% include "public/css/global/reset.css" %}{% endcss %}
+		{%- css %}{% include "public/css/global.css" %}{% endcss %}
 		{#- Or you can add from node_modules #}
 		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
 
@@ -55,7 +55,7 @@
 			</nav>
 		</header>
 
-		<main id="skip">
+		<main id="skip" class="wrapper">
 			<heading-anchors>
 				{{ content | safe }}
 			</heading-anchors>

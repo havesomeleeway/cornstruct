@@ -15,28 +15,31 @@ export default async function(eleventyConfig) {
 		}
 	});
 
-	// Copy the contents of the `public` folder to the output folder
-	// For example, `./public/css/` ends up in `_site/css/`
+	// Modified: Only copy non-CSS content from public
 	eleventyConfig
 		.addPassthroughCopy({
-			"./public/": "/"
+			"./public/!(css)/**/*": "/" // Copy everything except the css directory
 		})
 		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
-
-	// Run Eleventy when these files change:
-	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
 
 	// Watch images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpg,jpeg,gif}");
 
+	// Remove CSS watching as it will be handled by PostCSS
+	// Keep other configurations
+	eleventyConfig.addWatchTarget("tailwind.config.js");
+
+	// Enable passthrough copy during serve for better development experience
+	eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+
 	// Per-page bundles, see https://github.com/11ty/eleventy-plugin-bundle
 	// Adds the {% css %} paired shortcode
 	eleventyConfig.addBundle("css", {
-		toFileDirectory: "dist",
+		toFileDirectory: "_site",
 	});
 	// Adds the {% js %} paired shortcode
 	eleventyConfig.addBundle("js", {
-		toFileDirectory: "dist",
+		toFileDirectory: "_site",
 	});
 
 	// Official plugins
@@ -96,7 +99,7 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginFilters);
 
 	eleventyConfig.addPlugin(IdAttributePlugin, {
-		// by default we use Eleventy’s built-in `slugify` filter:
+		// by default we use Eleventy's built-in `slugify` filter:
 		// slugify: eleventyConfig.getFilter("slugify"),
 		// selector: "h1,h2,h3,h4,h5,h6", // default
 	});

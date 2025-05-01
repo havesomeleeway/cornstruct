@@ -1,0 +1,437 @@
+/* 
+  Global styles 
+
+  Low-specificity, global styles that apply to the whole 
+  project: https://cube.fyi/css.html
+*/
+
+/* Base body styling with dark background and primary text color */
+body {
+    background: var(--color-light);
+    color: var(--color-primary);
+    font-size: var(--size-step-00);
+    font-family: var(--font-base);
+    line-height: var(--leading-standard);
+    font-size-adjust: from-font; /* Allows for elements like <code> to be more in-proportion based on the font size */
+    margin: 0;
+  }
+  
+  /* Heading styles with balanced text wrapping and fine line height */
+  :is(h1, h2, h3, h4){
+    line-height: var(--leading-fine);
+    text-wrap: balance;
+  }
+  
+  /* H1 heading with large font size and limited width for readability */
+  h1{
+    font-size: var(--size-step-5);
+    max-width: 20ch;
+  }
+  
+  /* H2 heading with medium-large font size and limited width */
+  h2{
+    font-size: var(--size-step-3);
+    max-width: 35ch;
+  }
+  /* H3 heading with medium font size and limited width */
+  h3{
+    font-size: var(--size-step-2);
+    max-width: 35ch;
+  }
+  
+  /* H4-H6 headings with smaller font size */
+  :is(h4, h5, h6){
+    font-size: var(--size-step-2);
+  }
+  
+  /* Small text styling */
+  small{
+    font-size: var(--size-step-00);
+  }
+  
+  /* Styling for inserted text - highlights with primary color background */
+  ins {
+    text-decoration: none;
+    background: var(--color-primary);
+    color: var(--color-dark);
+    padding-inline: 0.3em;
+  }
+  
+  /* Code, keyboard input, and sample text styling with monospace font */
+  :is(code, kbd, samp) {
+    font-family: var(--font-mono);
+    padding: 0.2em 0.2em 0.05em 0.2em;
+    hyphens: none;
+    tab-size: 2;
+    text-align: left;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    box-decoration-break: clone;
+  }
+  
+  /* Fallback for browsers that don't support font-size-adjust */
+  @supports not (font-size-adjust: from-font) {
+    :is(code, kbd, samp) {
+      font-size: 0.8em;
+    }
+  }
+  
+  /* Pre-formatted code block styling with horizontal scrolling */
+  pre:has(code) {
+    width: max-content;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  /* Remove default styling from code inside pre blocks */
+  pre code {
+    border: none;
+    background: none;
+    padding: 0;
+  }
+  
+  /* Keyboard input styling with border */
+  kbd {
+    border: 1px solid;
+    padding-block-end: 0.1em;
+  }
+  
+  /* Variable styling with medium font weight */
+  var {
+    font-style: normal;
+    font-weight: var(--font-medium);
+  }
+  
+  /* Quote styling with italic font */
+  q {
+    font-style: italic;
+  }
+  
+  /* Unordered list styling with disc markers and indentation */
+  ul:not([class]) {
+    padding-inline-start: 1.7ch;
+    list-style-type: disc;
+  }
+  
+  /* List item padding in unordered lists */
+  ul:not([class]) > li {
+    padding-inline-start: var(--space-xs);
+  }
+  
+  /* Spacing between list items in ordered and unordered lists */
+  :is(ol, ul):not([class]) li + * {
+    margin-block-start: var(--flow-space, var(--space-xs));
+  }
+  
+  /* List marker styling for unordered lists */
+  ul ::marker {
+    font-size: 0.8lh;
+  }
+  
+  /* List marker styling for ordered lists */
+  ol ::marker {
+    font-size: 1em;
+    font-weight: var(--font-bold);
+  }
+  
+  
+  /* Lists with classes and roles will be out of standard flow, so remove the default spacing */
+  [role='list'][class],
+  [role='tablist'][class] {
+    margin-block: 0;
+    padding: 0;
+  }
+  
+  /* Definition term styling with medium font weight */
+  dt {
+    font-weight: var(--font-medium);
+  }
+  
+  
+  /* Spacing between definition term and description */
+  dt + dd {
+    margin-block-start: var(--space-xs);
+  }
+  
+  /* Spacing between definition description and next term */
+  dd + dt {
+    margin-block-start: var(--space-s);
+  }
+  
+  /* Definition description indentation */
+  dd {
+    margin-inline-start: 1.5ch;
+  }
+  
+  /* Blockquote styling with light text color */
+  blockquote {
+    margin-inline: 0;
+    color: var(--color-light);
+  }
+  
+  /* Blockquote footer styling with primary color and smaller font */
+  blockquote footer {
+    margin-block-start: var(--space-s);
+    color: var(--color-primary);
+    font-size: var(--size-step-0);
+  }
+  
+  /* Quote styling within blockquotes - removes italic */
+  blockquote q {
+    font-style: normal;
+  }
+  
+  
+  
+  /* Video and iframe styling with 16:9 aspect ratio */
+  :is(video, iframe[src*='youtube'], iframe[src*='vimeo']) {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+  
+  /* Image styling with responsive width */
+  img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Figure caption styling with monospace font and smaller text */
+  figcaption {
+    padding-block-start: 0.5em;
+    font-size: var(--size-step-0);
+    font-family: monospace;
+  }
+  
+  
+  /* Table styling with borders and full width */
+  table {
+    border: var(--stroke);
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Table header styling with bold text and fine line height */
+  th {
+    text-align: left;
+    font-weight: var(--font-bold);
+    line-height: var(--leading-fine);
+  }
+  
+  /* Table header padding */
+  thead th {
+    padding-block: var(--space-s);
+  }
+  
+  /* Table cell padding */
+  td,
+  th {
+    padding: var(--space-xs) var(--space-s);
+  }
+  
+  /* Border for table headers that are not the only one in their row */
+  th:not(:only-of-type) {
+    border-block-end: var(--stroke);
+  }
+  
+  /* Border for single table header in a row */
+  th:only-of-type {
+    border-inline-end: var(--stroke);
+  }
+  
+  /* Border between adjacent table cells */
+  :is(th, td) ~ :is(th, td) {
+    border-inline-start: var(--stroke);
+  }
+  
+  /* Border between table rows */
+  tr + tr :is(th, td) {
+    border-block-start: var(--stroke);
+  }
+  
+  /* Table caption styling and position */
+  caption {
+    caption-side: bottom;
+    margin-block-start: var(--space-s);
+  }
+  
+  
+  /* Link hover styling with underline offset */
+  a:not([class]):hover {
+    text-underline-offset: 0.2lh;
+  }
+  
+  /* Heading link styling with thicker underline and offset */
+  :is(h1, h2, h3, h4) a:not([class]) {
+    text-decoration-thickness: 0.1ex;
+    text-underline-offset: 0.2ex;
+  }
+  
+  /* Heading link hover styling with increased underline offset */
+  :is(h1, h2, h3, h4) a:not([class]):hover {
+    text-underline-offset: 0.3ex;
+  }
+  
+  
+  /* Focus styling - removes default outline */
+  :focus {
+    outline: none;
+  }
+  
+  /* Visible focus styling with custom outline */
+  :focus-visible {
+    outline: 2px solid var(--focus-color, currentColor);
+    outline-offset: var(--focus-offset, 0.2lh);
+  }
+  
+  
+  /* Firefox is the only browser that doesn't outline the whole element unless you make it display: inline-block. That in itself causes multiple flow issues so we can detect it, using its own vendor prefix and reduce focus offset
+  */
+  @supports (-moz-appearance: none) {
+    :root {
+      --focus-offset: 0.08em;
+    }
+  }
+  
+  
+  /* Target element styling with scroll margin for better positioning when navigating to anchors */
+  :target {
+    scroll-margin-block: 5lh;
+  }
+  
+  
+  /* Text selection styling with dark text on light background */
+  ::selection {
+    color: var(--color-dark);
+    background: var(--color-light);
+  }
+  
+  
+  /* Horizontal rule styling with top border and vertical spacing */
+  hr {
+    border: none;
+    border-block-start: var(--stroke);
+    margin-block: var(--flow-space, var(--space-xl));
+  }
+  
+  
+  /* SVG styling with automatic width and line height */
+  svg:not([class]) {
+    width: auto;
+    height: 1lh;
+  }
+  
+  /* SVG styling to prevent shrinking in flex containers */
+  svg {
+    flex-shrink: 0;
+  }
+  
+  /* SVG with role="img" and dimensions styling with light background and padding */
+  svg[role='img'][width][height] {
+    width: revert;
+    height: revert;
+    background: var(--color-light);
+    padding: var(--space-xs);
+  }
+  
+  
+  /* Form element spacing using flow space variable */
+  form > * + * {
+    margin-top: var(--flow-space, 1rem);
+  }
+  
+  
+  /* Form input accent color using primary color */
+  :is(input, select, textarea) {
+    accent-color: var(--color-primary);
+  }
+  
+  
+  /* Text input, select, and textarea styling with dark background and light text */
+  :is(input:not([type='checkbox'], [type='radio'], [type='color']), select, textarea) {
+    padding: 0.5em 0.8em;
+    border-radius: var(--radius-s);
+    border: var(--stroke-solid);
+    background: var(--color-dark-glare);
+    color: var(--color-light);
+    width: 100%;
+  
+    &::placeholder {
+      color: var(--color-mid);
+      opacity: 1;
+    }
+  }
+  
+  
+  /* Label styling with fine line height and medium font weight */
+  label {
+    line-height: var(--leading-fine);
+    font-weight: var(--font-medium);
+  }
+  
+  /* Add line break after labels */
+  label::after {
+    content: '\A';
+    white-space: pre;
+  }
+  
+  
+  /* Label containing input styling with flex layout for alignment */
+  label:has(input) {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-s);
+    font-weight: var(--font-normal);
+  }
+  
+  /* Spacing between consecutive labels containing inputs */
+  label:has(input) + label:has(input) {
+    --flow-space: var(--space-s-m);
+  }
+  
+  /* Slightly adjusts the vertical position of the check/radio */
+  label:has(input) input {
+    transform: translateY(-0.1ex);
+  }
+  
+  
+  /* Disabled input styling with mid color background */
+  input:disabled {
+    background: var(--color-mid);
+  }
+  
+  /* Disabled input and label styling with not-allowed cursor */
+  input:disabled,
+  label input:disabled + * {
+    cursor: not-allowed;
+  }
+  
+  
+  /* Fieldset styling with border and padding */
+  fieldset {
+    border: var(--stroke);
+    padding: var(--space-s);
+  }
+  
+  /* Legend styling with medium font weight and horizontal padding */
+  legend {
+    font-weight: var(--font-medium);
+    padding-inline: var(--space-xs);
+  }
+  
+  
+  /* Summary styling with bold font and pointer cursor */
+  summary {
+    font-weight: var(--font-bold);
+    cursor: pointer;
+  }
+  
+  /* Spacing for summary when details element is open */
+  details[open] summary {
+    margin-block-end: var(--space-s);
+  }
+  
+  
