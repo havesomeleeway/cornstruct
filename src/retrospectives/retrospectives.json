@@ -1,0 +1,5 @@
+{
+  "layout": "post",
+  "tags": "retrospectives",
+  "permalink": "/retrospectives/{{ title | slugify }}/index.html"
+} 

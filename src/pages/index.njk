@@ -1,54 +1,40 @@
 ---
 layout: base
 permalink: /index.html
-title: 'Eleventy Excellent'
-description: 'Eleventy starter using modern CSS, fluid type, fluid spacing, flexible layout and progressive enhancement.'
+title: 'Cornstruct'
+description: 'Product designer. Science nerd, mediocre developer, average baker, and rogue teacher.'
 blog:
-  title: 'Blog'
-  intro: "I'm showing the last 4 blog posts, but there might be more!"
+  title: 'Rabbit Holes'
+  intro: "Not exactly a blog but intermittent notes on my reading list, observations, and contemplations."
 ---
 
-<div class="wrapper">
-  <header class="full | section" style="--spot-color: var(--color-primary)">
-    <div class="section__inner flow region">
-      <h1 class="text-center" style="color: var(--color-light);">{{ title }}</h1>
-    </div>
-    {% svg "divider/waves", null, "divider" %}
-  </header>
 
-  <article class="full | region">
-    <div class="wrapper flow prose">
-      <h2 id="an-eleventy-starter">An Eleventy starter</h2>
+    <article class="wrapper flow prose region">
+      <h1>👋🏼 Hello, my name is Lee Wei</h1>
       <p>
-        Built around a CSS workflow that emphasizes guiding browser styling rather than micromanaging it. It
-        incorporates progressive enhancement, fluid type and spacing, and utilizes modern CSS features for
-        layout. The goal is to develop frontends that provide a great experience across all devices,
-        connection speeds, and usage contexts.
+        → Currently designing and consulting at <a href="https://www.epam.com">EPAM</a><br>
+        → Science nerd<br>
+        → Mediocre developer<br>
+        → Average baker
       </p>
-      <p>
-        <strong>This is <a href="https://github.com/madrilene/eleventy-excellent/">version 4</a>.</strong> I keep a
-        <a href="https://github.com/madrilene/eleventy-excellent/tree/v1">branch of v1</a>,
-        <a href="https://github.com/madrilene/eleventy-excellent/tree/v2">v2</a> and <a href="https://github.com/madrilene/eleventy-excellent/tree/v3">v3</a>. I  tried to <a href="/get-started/#docs-lol">document most features and methodologies</a>.
-      </p>
-      <p><strong>Have fun</strong> and let me know if you find any issues or have ideas for improvements!</p>
-    </div>
-  </article>
-
-  <section class="full | region">
+      <h3>Retrospectives</h3>
+      <p>During my early product design career from 2015 to 2020, I played foundational roles as an early employee and co-founder that significantly shaped my professional trajectory. I have spent time retrospectively working on reflective write-ups to document the valuable experiences, heartbreaks, and lessons learned during these formative periods.</p>
+      <a href="/retrospectives/homekoala/">Homekoala (2015 → 2017)</a>
+      <a href="/retrospectives/oromico/">Oromico (2017 → 2020)</a>
+    </article>
+    
+      <section>
     <div class="wrapper flow prose">
-      <h2>{{ blog.title }}</h2>
+      <h3>{{ blog.title }}</h3>
       {% if blog.intro %}
         <p>{{ blog.intro }}</p>
       {% endif %}
-      <div class="feature |  region region-space-l">
-        <custom-masonry layout="50-50">
+      <div class="wrapper flow">
           {% set itemList = collections.allPosts %}
 					{% asyncEach item in itemList.slice(0, 4) %}
             {% set headingLevel = "h3" %}
 						{% include "partials/card-blog.njk" %}
 					{% endeach %}
-        </custom-masonry>
       </div>
     </div>
   </section>
-</div>

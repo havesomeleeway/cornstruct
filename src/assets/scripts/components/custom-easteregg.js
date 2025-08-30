@@ -2,14 +2,14 @@ class customEasteregg extends HTMLElement {
   constructor() {
     super();
     // Initialize with default keywords
-    this.keywords = ['eleventy', 'excellent'];
+    this.keywords = ['corn', 'cornstruct'];
     // Add any custom keyword passed as an attribute
     const customKeyword = this.getAttribute('keyword');
     if (customKeyword) {
       this.keywords.push(customKeyword);
     }
 
-    this.shape = this.getAttribute('shape') || '⭐️';
+    this.shape = this.getAttribute('shape') || '🌽';
     this.particleCount = parseInt(this.getAttribute('particle-count'), 10) || 30;
     this.codes = this.keywords.map(keyword => keyword.split(''));
     this.indexes = new Array(this.keywords.length).fill(0);

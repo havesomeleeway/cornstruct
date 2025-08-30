@@ -16,8 +16,8 @@ custom-card > :empty {
 }
 
 custom-card ::selection {
-  color: var(--color-dark);
-  background-color: var(--color-secondary);
+  color: var(--color-light);
+  background-color: var(--color-dark);
 }
 
 custom-card :is(h2, h3) {

@@ -142,13 +142,13 @@ body:has([data-drawer-toggle][aria-expanded='true']) {
 .mainnav :is(a, [data-submenu-toggle]):hover {
   --nav-item-background: transparent;
   --nav-item-text-color: var(--color-text);
-  --nav-item-decoration-color: var(--color-bg-accent-2);
+  --nav-item-decoration-color: var(--color-primary);
 }
 
 .mainnav [aria-current='page'],
 .mainnav [data-state='active'] {
   --nav-item-background: var(--color-bg);
-  --nav-item-text-color: var(--color-primary);
+  --nav-item-text-color: var(--color-text);
   --nav-item-decoration-color: var(--color-primary);
 }
 
@@ -214,7 +214,7 @@ li:has(ul a[aria-current='page']) > [data-submenu-toggle] {
   .mainnav [data-state='active'],
   li:has(ul a[aria-current='page']) > [data-submenu-toggle] {
     --nav-item-background: transparent;
-    --nav-item-text-color: var(--color-primary);
+    --nav-item-text-color: var(--color-text);
     --nav-item-decoration-color: var(--color-primary);
   }
 
@@ -258,7 +258,7 @@ assumes that the button doesn’t exist without JS, making the list the first ch
 .mainnav ul:first-child [aria-current='page'],
 .mainnav ul:first-child [data-state='active'] {
   --nav-item-background: transparent;
-  --nav-item-text-color: var(--color-primary);
+  --nav-item-text-color: var(--color-text);
   --nav-item-decoration-color: var(--color-primary);
 }
 

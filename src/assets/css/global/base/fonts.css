@@ -1,39 +1,72 @@
 @font-face {
-  font-family: 'Atkinson Hyperlegible';
+  font-family: 'Novela';
+  src: local(''), url('/assets/fonts/novela/novela-regular-webfont.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
-  font-weight: 400;
-  src:
-    local(''),
-    url('/assets/fonts/atkinson/atkinson-hyperlegible-regular.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Atkinson Hyperlegible';
+  font-family: 'Novela';
+  src: local(''), url('/assets/fonts/novela/novela-regularitalic-webfont.woff2') format('woff2');
+  font-weight: 400;
   font-style: italic;
   font-display: swap;
+}
+
+@font-face {
+  font-family: 'Novela';
+  src: local(''), url('/assets/fonts/novela/novela-semibold-webfont.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Novela';
+  src: local(''),url('/assets/fonts/novela/novela-semibolditalic-webfont.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* IBM Plex Sans font faces */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: local(''), url('/assets/fonts/ibm-plex-sans/IBMPlexSans-Text.woff2') format('woff2');
   font-weight: 400;
-  src:
-    local(''),
-    url('/assets/fonts/atkinson/atkinson-hyperlegible-italic.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Atkinson Hyperlegible';
-  font-style: normal;
+  font-family: 'IBM Plex Sans';
+  src: local(''), url('/assets/fonts/ibm-plex-sans/IBMPlexSans-TextItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
   font-display: swap;
-  font-weight: 700;
-  src:
-    local(''),
-    url('/assets/fonts/atkinson/atkinson-hyperlegible-bold.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Redhat';
+  font-family: 'IBM Plex Sans';
+  src: local(''), url('/assets/fonts/ibm-plex-sans/IBMPlexSans-SemiBold.woff2') format('woff2');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
-  font-weight: 900;
-  src:
-    local(''),
-    url('/assets/fonts/redhat/red-hat-display-v7-latin-900.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: local(''), url('/assets/fonts/ibm-plex-sans/IBMPlexSans-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Apply Novela to headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Novela', serif;
+  font-weight: 600; /* Using semibold for headings */
+}
+
+

@@ -1,4 +1,1 @@
-<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1em" height="1em">
-    <title>PeerTube</title>
-    <path d="M12 6.545v10.91L20.727 12M3.273 12v12L12 17.455M3.273 0v12L12 6.545" />
-</svg>
+<svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1{fill:none;}</style></defs><title>logo--peertube</title><path d="M16,2C8.27,2,2,8.27,2,16s6.27,14,14,14,14-6.27,14-14S23.73,2,16,2z M22.5,16.5l-7,4.5c-0.5,0.3-1-0.1-1-0.7V11.7c0-0.6,0.5-1,1-0.7l7,4.5C23,15.8,23,16.2,22.5,16.5z"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/></svg> 

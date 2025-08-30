@@ -8,9 +8,9 @@
 }
 
 .section blockquote {
-  font-weight: var(--font-bold);
+  font-weight: var(--font-semibold);
   line-height: 1;
-  font-size: var(--size-step-4);
+  font-size: var(--size-step-0);
   letter-spacing: var(--tracking-s);
 }
 

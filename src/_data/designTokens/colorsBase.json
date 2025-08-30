@@ -4,22 +4,22 @@
   "shades_neutral": [
     {
       "name": "Gray",
-      "value": "#888888"
+      "value": "#CFCECA"
     }
   ],
   "shades_vibrant": [],
   "light_dark": [
     {
-      "name": "Pink",
-      "value": "#dd4462"
-    },
-    {
-      "name": "Blue",
-      "value": "#4467dd"
+      "name": "Green",
+      "value": "#2A7E3B"
     },
     {
       "name": "Gold",
-      "value": "#fbbe25"
+      "value": "#ffbb44"
+    },
+    {
+      "name": "Sky",
+      "value": "#4488FF"
     }
   ],
   "standalone": []

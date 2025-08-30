@@ -5,12 +5,12 @@
     {
       "name": "Display",
       "description": "Display font stack for headings and large text. Redhat Display is made for headlines and big statements, are low contrast and spaced tightly, with a large x-height and open counters.",
-      "value": ["Redhat", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"]
+      "value": ["Novela", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"]
     },
     {
       "name": "Base",
-      "description": "Base font stack for body text. Atkinson Hyperlegible, named after the founder of the Braille Institute, has been developed specifically to increase legibility for readers with low vision, and to improve comprehension.",
-      "value": ["Atkinson Hyperlegible", "system-ui", "sans-serif"]
+      "description": "Base font stack for body text. IBM Plex Sans is a humanist sans-serif typeface designed by Mike Abbink and the Bold Monday type foundry for IBM. It's optimized for legibility and readability across different screen sizes and resolutions.",
+      "value": ["IBM Plex Sans", "system-ui", "sans-serif"]
     },
     {
       "name": "Mono",

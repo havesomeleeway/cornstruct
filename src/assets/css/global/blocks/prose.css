@@ -2,18 +2,23 @@
 
 .prose {
   --flow-space: var(--space-m-l);
-  --wrapper-width: 64rem;
+  --wrapper-width: 56rem;
 }
 
-.prose :is(pre, pre + *, figure, picture) {
+:is(pre, pre + *, figure, picture) {
   --flow-space: var(--space-m-l);
 }
-
+/* 
+  This rule targets any element that immediately follows a <figure> or <picture> 
+  inside an element with the 'prose' class. 
+  It sets a custom spacing variable (--flow-space) and ensures the width is 'auto' 
+  for those elements.
+*/
 .prose :is(figure + *, picture + *) {
   --flow-space: var(--space-xl);
 }
 
-.prose :is(img, video) {
+.prose :is(3, video) {
   border: var(--stroke);
 }
 
@@ -35,7 +40,7 @@
 }
 
 .prose :is(p, li, dl, blockquote) {
-  max-inline-size: 60ch;
+  max-inline-size: 75ch;
   text-wrap: pretty;
 }
 

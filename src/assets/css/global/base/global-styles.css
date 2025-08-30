@@ -49,19 +49,20 @@ h3 {
 }
 
 blockquote {
-  padding: var(--space-m-l);
+  padding: var(--space-s-m);
   border-inline-start: 0.5rem solid var(--color-primary);
-  font-size: var(--size-step-2);
+  font-size: var(--size-step-0);
+  font-style: italic; 
 }
 
 blockquote > * + * {
-  margin-block-start: var(--space-m-l);
+  margin-block-start: var(--space-s-m);
 }
 
 blockquote :last-child {
   font-family: var(--font-base);
-  font-style: normal;
-  font-size: var(--size-step-1);
+  font-style: italic;
+  font-size: var(--size-step-0);
 }
 
 input,
@@ -94,6 +95,7 @@ figcaption {
   font-size: var(--size-step-min-1);
   text-align: center;
   padding-block-end: var(--space-xs);
+  color: var(--color-text-accent);
 }
 
 figcaption:after {
@@ -105,6 +107,7 @@ figcaption:after {
   inline-size: 50%;
   margin-inline: auto;
   opacity: 0.8;
+  color: var(--color-text-accent);
 }
 
 a {
@@ -113,7 +116,9 @@ a {
 }
 
 a:not([class]):hover {
-  text-decoration: none;
+  text-decoration-thickness: 0.15ex;
+  text-underline-offset: 0.2ch;
+  text-decoration-color: var(--color-primary);
 }
 
 :focus {
