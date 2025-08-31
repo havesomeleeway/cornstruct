@@ -1,0 +1,19 @@
+<post-cover class="flow" webc:root>
+  <div class="cluster gutter-s">
+    <slot name="date"></slot>
+    <slot name="headline"></slot>
+  </div>
+  <div slot="content" webc:nokeep>
+    <slot name="content"></slot>
+  </div>
+</post-cover>
+
+<style>
+  post-cover {
+    display: block;
+  }
+  
+  post-cover [slot="content"] {
+    color: var(--color-text-accent);
+  }
+</style>

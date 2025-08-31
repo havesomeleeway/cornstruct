@@ -10,7 +10,7 @@ blog:
 
 
     <article class="wrapper flow prose region">
-      <h1>👋🏼 Hello, my name is Lee Wei</h1>
+      <h2>👋🏼 Hello, my name is Lee Wei</h2>
       <p>
         → Currently designing and consulting at <a href="https://www.epam.com">EPAM</a><br>
         → Science nerd<br>
@@ -18,9 +18,11 @@ blog:
         → Average baker
       </p>
       <h3>Retrospectives</h3>
+      <section>
       <p>During my early product design career from 2015 to 2020, I played foundational roles as an early employee and co-founder that significantly shaped my professional trajectory. I have spent time retrospectively working on reflective write-ups to document the valuable experiences, heartbreaks, and lessons learned during these formative periods.</p>
-      <a href="/retrospectives/homekoala/">Homekoala (2015 → 2017)</a>
+      <a href="/retrospectives/homekoala/">Homekoala (2015 → 2017)</a><br>
       <a href="/retrospectives/oromico/">Oromico (2017 → 2020)</a>
+      </section>
     </article>
     
       <section>
@@ -34,6 +36,7 @@ blog:
 					{% asyncEach item in itemList.slice(0, 4) %}
             {% set headingLevel = "h3" %}
 						{% include "partials/card-blog.njk" %}
+            {% include "partials/post-cover.njk" %}
 					{% endeach %}
       </div>
     </div>

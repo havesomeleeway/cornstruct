@@ -1,0 +1,5 @@
+/* Alternative: Target the specific div */
+post-cover div[slot='content'] {
+  color: var(--color-primary);
+  font-size: var(--size-step-4);
+}

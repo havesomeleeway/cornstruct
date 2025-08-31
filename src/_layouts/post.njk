@@ -8,36 +8,38 @@ schema: BlogPosting
     <h1>{{ title }}</h1>
 
     {% if image %}
-      <!-- image -->
-      {% image image, alt or "", credit, "eager", "full" %}
-    {% endif %}
+    <!-- image -->
+    {% image image, alt or "", credit, "eager", "full" %} {% endif %}
 
     <p class="meta | cluster gutter-xs-s">
       <!-- draft status -->
       {%- if draft -%}
-        <span class="button" data-small-button data-button-variant="tertiary">draft</span>
+      <span class="button" data-small-button data-button-variant="tertiary"
+        >draft</span
+      >
       {%- endif %}
       <!-- date -->
-      {% set definedDate = date %} {% include "partials/date.njk" %}
-      {%
-        if tags.length >
-        1
-      %}
-        <!-- tags -->
-        {% for tag in tags %}{% if tag != "posts" %}
-          <a class="button" href="/tags/{{ tag | slugify }}/" data-small-button> {{ tag }} </a>
-        {% endif %}{% endfor %}
-      {% endif %}
+      {% set definedDate = date %} {% include "partials/date.njk" %} {% if
+      tags.length > 1 %}
+      <!-- tags -->
+      {% for tag in tags %}{% if tag != "posts" %}
+      <a class="button" href="/tags/{{ tag | slugify }}/" data-small-button>
+        {{ tag }}
+      </a>
+      {% endif %}{% endfor %} {% endif %}
     </p>
 
-    {{ content | safe }}
-    {% include 'partials/edit-on.njk' %}
+    {{ content | safe }} {% include 'partials/edit-on.njk' %}
   </div>
 
   <!--  h-card infos: https://indieweb.org/authorship -->
   <div hidden class="h-entry">
-    <a class="u-url" href="{{ page.url | url | absoluteUrl(meta.url) }}">{{ title }}</a>
-    <a class="p-name u-url" rel="author" href="{{ meta.url }}">{{ meta.author.name }}</a>
+    <a class="u-url" href="{{ page.url | url | absoluteUrl(meta.url) }}"
+      >{{ title }}</a
+    >
+    <a class="p-name u-url" rel="author" href="{{ meta.url }}"
+      >{{ meta.author.name }}</a
+    >
     <img
       eleventy:ignore
       class="u-author h-card"
@@ -47,7 +49,5 @@ schema: BlogPosting
   </div>
 </div>
 
-{%- css "local" -%}
-  {%- include 'css/post.css' -%}
-  {%- include 'css/footnotes.css' -%}
-{%- endcss -%}
+{%- css "local" -%} {%- include 'css/post.css' -%} {%- include
+'css/footnotes.css' -%} {%- endcss -%}

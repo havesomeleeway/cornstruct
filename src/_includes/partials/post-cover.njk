@@ -1,0 +1,12 @@
+{# {% set definedDate = definedDate | default(item.date) %}
+
+<post-cover class="flow">
+  <div class="cluster gutter-s">
+    <span slot="date">{% include "partials/date.njk" %}</span>
+    <a href="{{ item.url | url }}">{{ item.data.title }}</a>
+  </div>
+  <div slot="content" webc:nokeep>
+    {{ item.data.description | markdownFormat | safe }}
+  </div>
+</post-cover>
+{% css "local" %} {% include "css/custom-card.css" %} {% endcss %} #}
