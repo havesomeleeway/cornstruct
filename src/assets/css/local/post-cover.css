@@ -1,5 +1,94 @@
-/* Alternative: Target the specific div */
-post-cover div[slot='content'] {
+/* Stub component styles */
+.stub {
+  display: block;
+  text-decoration: none;
+}
+
+/* Spacing between stubs based on content */
+.stub:has(.stub--text) + .stub {
+  margin-top: var(--space-m-l);
+}
+
+.stub:not(:has(.stub--text)) + .stub {
+  margin-top: var(--space-xs);
+}
+
+/* Header layout */
+.stub--header {
+  align-items: baseline;
+  display: flex;
+  gap: var(--space-l);
+  justify-content: flex-start;
+}
+
+/* Date and title inline styling */
+.stub--date,
+.stub--title {
+  display: inline-block;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+/* Title styling */
+.stub--title {
+  font-size: var(--size-step-0);
+  font-weight: var(--font-medium);
+  margin: 0;
+  transition: color 0.2s ease-out;
+}
+
+/* Date styling */
+.stub--date {
+  font-weight: var(--font-regular);
+  color: var(--color-text-accent);
+}
+
+/* Text content styling */
+.stub--text {
+  line-height: var(--leading-tight);
+  margin-top: var(--space-xs);
+  color: var(--color-text-accent);
+}
+
+/* Tags styling */
+.stub--tags {
+  margin-top: var(--space-xs);
+}
+
+/* Arrow icon styling */
+.linkArrow {
+  display: inline-block;
+  margin-inline-start: var(--space-xs);
+  transition: transform 0.2s ease-out;
+}
+
+.linkArrow--line {
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.linkArrow--tip {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Hover states */
+.stub:hover .stub--title {
   color: var(--color-primary);
-  font-size: var(--size-step-4);
+  transition-duration: 25ms;
+}
+
+.stub:hover .linkArrow {
+  transform: translateX(2px);
+}
+
+/* Responsive design */
+@media (max-width: 800px) {
+  .stub--header {
+    flex-direction: column;
+    gap: 0;
+  }
 }

@@ -1,12 +1,35 @@
-{# {% set definedDate = definedDate | default(item.date) %}
+{% set headingLevel = headingLevel | default("h2") %}
+{% set definedDate = definedDate | default(item.date) %}
+{% set showTags = showTags | default(true) %}
 
-<post-cover class="flow">
-  <div class="cluster gutter-s">
-    <span slot="date">{% include "partials/date.njk" %}</span>
-    <a href="{{ item.url | url }}">{{ item.data.title }}</a>
+<a class="stub stub--post unstyled" href="{{ item.url | url }}">
+  <div class="stub--header">
+    <div class="stub--date">
+      {%- if item.data.draft -%}<span class="button" data-small-button data-button-variant='tertiary'>draft</span>{%- endif %} 
+      {% include "partials/date.njk" %}
+    </div>
+    <{{ headingLevel }} class="stub--title">
+      {{ item.data.title }}
+      <svg class="linkArrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
+        <g fill-rule="evenodd">
+          <path class="linkArrow--line" d="M0 5h7"></path>
+          <path class="linkArrow--tip" d="M1 1l4 4-4 4"></path>
+        </g>
+      </svg>
+    </{{ headingLevel }}>
   </div>
-  <div slot="content" webc:nokeep>
-    {{ item.data.description | markdownFormat | safe }}
-  </div>
-</post-cover>
-{% css "local" %} {% include "css/custom-card.css" %} {% endcss %} #}
+  <div class="stub--text">{{ item.data.description | markdownFormat | safe }}</div>
+  {% if showTags and item.data.tags.length > 1 %}
+    <div class="stub--tags">
+      {% for tag in item.data.tags %}
+        {% if tag != "posts" %}
+          <span class="button" data-small-button>{{ tag }}</span>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</a>
+
+{% css "local" %}
+  {% include "css/post-cover.css" %}
+{% endcss %}

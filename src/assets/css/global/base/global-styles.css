@@ -52,7 +52,7 @@ blockquote {
   padding: var(--space-s-m);
   border-inline-start: 0.5rem solid var(--color-primary);
   font-size: var(--size-step-0);
-  font-style: italic; 
+  font-style: italic;
 }
 
 blockquote > * + * {

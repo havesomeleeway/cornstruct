@@ -36,7 +36,7 @@
 }
 
 .prose :is(h1, h2, h3, h4) + *:not([class]):not(figure) {
-  --flow-space: var(--space-l);
+  --flow-space: var(--space-s);
 }
 
 .prose :is(p, li, dl, blockquote) {
