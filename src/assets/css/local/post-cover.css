@@ -32,13 +32,14 @@
 /* Title styling */
 .stub--title {
   font-size: var(--size-step-0);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-regular);
   margin: 0;
   transition: color 0.2s ease-out;
 }
 
 /* Date styling */
 .stub--date {
+  font-size: var(--size-step-0);
   font-weight: var(--font-regular);
   color: var(--color-text-accent);
 }
