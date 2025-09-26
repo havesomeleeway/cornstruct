@@ -17,7 +17,7 @@
 .stub--header {
   align-items: baseline;
   display: flex;
-  gap: var(--space-l);
+  gap: var(--space-xs);
   justify-content: flex-start;
 }
 
@@ -42,14 +42,14 @@
 .stub--date {
   font-size: var(--size-step-0);
   font-weight: var(--font-regular);
-  color: var(--color-text-accent);
+  color: var(--color-text-mid);
 }
 
 /* Text content styling */
 .stub--text {
   line-height: var(--leading-tight);
   margin-top: var(--space-xs);
-  color: var(--color-text-accent);
+  color: var(--color-text-mid);
 }
 
 /* Tags styling */
