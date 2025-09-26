@@ -31,6 +31,7 @@
 
 /* Title styling */
 .stub--title {
+  font-family: var(--font-base);
   font-size: var(--size-step-0);
   font-weight: var(--font-regular);
   margin: 0;
@@ -61,19 +62,6 @@
   display: inline-block;
   margin-inline-start: var(--space-xs);
   transition: transform 0.2s ease-out;
-}
-
-.linkArrow--line {
-  stroke: currentColor;
-  stroke-width: 1.5;
-}
-
-.linkArrow--tip {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 /* Hover states */
