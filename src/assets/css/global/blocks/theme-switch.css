@@ -1,17 +1,20 @@
-.theme-switch h2 {
-  font-size: var(--size-step-min-1);
-  font-family: var(--font-base);
+/* Theme toggle in navigation */
+nav .theme-toggle-button {
+  width: 1em;
+  height: 1em;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+  padding: var(--space-xs);
 }
 
-.theme-switch .button[aria-pressed='true'] {
-  --_color-contrast: var(--color-tertiary);
-  --button-bg: var(--_color-contrast);
-  --button-color: var(--color-dark);
-  --button-border-color: var(--_color-contrast);
-  outline-color: var(--_color-contrast);
-}
-
-/* Hide without JS */
-is-land:not(:defined) .theme-switch {
-  display: none;
+nav .theme-toggle-button svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
 }
