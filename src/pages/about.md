@@ -20,7 +20,7 @@ This minuscule corner on the internet where my site sits represents my rough man
 I've been working as a Senior Designer at [EPAM](https://www.epam.com/) for roughly {{ "2023" | workExperience }}, where I collaboratively design and develop solutions for our corporate clients such as DHL, Heineken, HSBC, and more. In my free time, I do my best to volunteer with non-profit organisations such as [The Astronauts Collective](https://www.hellotac.org/) engaging youths and students to help them bridge that school-to-life transition.
 
 
-### Fun Facts (in no specific order of fun-ness)
+### Fun facts in no specific order of fun-ness
 1. I love baking. Cookbooks have had a special draw on me prior to any genre of books as far as I can remember. One of my core memories involves sprinting to a neighbourhood cake shop, begging for them to sell me a carton of whipped cream as I was desperately trying to rescue a failed chocolate ganache at home.
 2. I have an extreme love-hate relationship with running. To non-runners, I run way too much and to serious runners, I run way too little.
 3. I really like jazz piano, but I'm not really good with it.
