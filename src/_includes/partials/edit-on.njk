@@ -1,9 +1,11 @@
-{% if meta.viewRepo.allow %}
+{# Only show the edit link if it's enabled in the configuration #} {% if
+meta.viewRepo.allow %}
 <hr />
 <p class="text-step-min-1">
-  {{ meta[page.lang].blog.githubEdit }}
-  <a
-    href="{{ pkg.repository.url | url | replace('.git', '/tree/main/') }}{{ page.inputPath }}"
+  {# Display localized text for "Edit on GitHub" or similar #} {{
+  meta[page.lang].blog.githubEdit }} {# Create a link to the GitHub repository
+  file for editing #}
+  <a href="{{ pkg.repository.url | url }}/blob/main/{{ page.inputPath }}"
     >{{ meta.viewRepo.infoText }}</a
   >
 </p>

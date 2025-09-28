@@ -5,7 +5,14 @@
     {
       "name": "Display",
       "description": "Display font stack for headings and large text. Redhat Display is made for headlines and big statements, are low contrast and spaced tightly, with a large x-height and open counters.",
-      "value": ["Novela", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"]
+      "value": [
+        "Novela",
+        "Segoe UI",
+        "Roboto",
+        "Helvetica Neue",
+        "Arial",
+        "sans-serif"
+      ]
     },
     {
       "name": "Base",
@@ -16,6 +23,7 @@
       "name": "Mono",
       "description": "Monospace font for code and preformatted text.",
       "value": [
+        "IBM Plex Mono",
         "ui-monospace",
         "Cascadia Code",
         "Source Code Pro",

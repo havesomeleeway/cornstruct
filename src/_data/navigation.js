@@ -9,10 +9,10 @@ export default {
       url: '/rabbit-holes/'
     }
   ],
-  // bottom: [
-  //   {
-  //     text: 'Style guide',
-  //     url: '/styleguide/'
-  //   },
-  // ]
+  bottom: [
+    {
+      text: 'Style guide',
+      url: '/styleguide/'
+    }
+  ]
 };

@@ -47,7 +47,7 @@
   --color-secondary: var(--color-green);
   --color-tertiary: var(--color-sky);
 
-  --color-text-accent: var(--color-gray-500);
+  --color-text-accent: var(--color-gray-600);
   --color-bg-accent: var(--color-gray-200);
   --color-bg-accent-2: var(--color-gray-300);
 }
