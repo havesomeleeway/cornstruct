@@ -8,11 +8,11 @@ export default {
       text: 'Rabbit Holes',
       url: '/rabbit-holes/'
     }
-  ],
-  bottom: [
-    {
-      text: 'Style guide',
-      url: '/styleguide/'
-    }
   ]
+  // bottom: [
+  //   {
+  //     text: 'Style guide',
+  //     url: '/styleguide/'
+  //   }
+  // ]
 };
