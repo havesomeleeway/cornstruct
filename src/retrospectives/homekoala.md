@@ -138,7 +138,7 @@ Matt concluded the article with an illuminating point:
 
 > This begs the question: why bother building a search engine / two-sided market place when you could just build a suite of tools and concentrate on marketing them directly to the real estate industry? It’s early days but I think that there are a lot of factors to be ironed out here before this startup has a fighting chance making it in Australia, especially because they are not based in the country.
 
-After Homekoala, I was immediately roped into the next startup, where I served as co-founder from 2017 - 2021. Read about my journey with Oromico [over here](https://www.notion.so/Oromico-17c0e991f56580fb9fe4da6e364a1668?pvs=21).
+After Homekoala, I was immediately roped into the next startup, where I served as co-founder from 2017 - 2021. Read about my journey with Oromico [over here](/src/retrospectives/oromico.md).
 
 ## Appendix
 It also turns out that I had more work documented about Homekoala than I expected.

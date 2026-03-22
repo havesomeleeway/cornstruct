@@ -6,7 +6,7 @@ description: "Retrospectives on Oromico, a startup where I was co-founder of."
 
 Between 2017 to 2021, I was a co-founder of a local startup called Oromico which specialised in consolidating finances for high-net worth tax reporting, an area which I had absolutely no expertise in, but more on that in a little bit.
 
-[Our angel investor](https://www.linkedin.com/in/hoong-shen-wong-9a38b817/) in Homekoala, was an Executive Director at UBS, focusing on Wealth Management for client tax reporting. He saw an opportunity within the FinTech space to tackle this as a problem and roped in my co-founders to work on his idea. He suggested this was a neglected FinTech segment with massive potential for digitisation and disruption. 
+Our angel investor who had decades of experience in the wealth management sector saw an opportunity within the FinTech space to tackle this as a problem and roped in my co-founders to work on his idea. He suggested this was a neglected FinTech segment with massive potential for digitisation and disruption. 
 
 If you’re still confused by the initial product direction, think [TurboTax](https://turbotax.intuit.com/), but for rich people.
 
